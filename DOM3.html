@@ -1,21 +1,29 @@
 <html>
-    <head>
-        <title> DOM 3 | Add and Delete Modes</title>
-    </head>
-
+   
     <body>
-        <h1> hays </h1>
+        <h2 class = "name">JUMA0-AS</h2>
+        <button>CLICK</button>
         <script>
-            var NewElem = document.createElement("h1")
-            newElem.innerText = "Aguuuuy";
-            newElem.style.color = ("teal");
+            const el = document.querySelector("h2");
+            el.addEventListener("click",()=>{
+                document.querySelector(".name").remove();
+            });
 
-            document.querySelector("button").addEventListener("click").function()
-            {
-                document.querySelector("h1").remove();
-            };
+            var btn = document.querySelector("button");
 
-            document.querySelector("body").appendChild(newElem);
-        </script>
-    </body>
+            
+            btn.addEventListener("click", ()=>{
+                const childElement = document.createElement("h3")
+                childElement.innerHTML = "<h3>HIIIIIII!!!!</h3>";
+
+                childElement.addEventListener("click", () =>{
+                    document.querySelector("h3").remove();
+                });
+                const parent = document.querySelector("body");
+                parent.appendChild(childElement);
+            });
+
+            </script>
+            </body>
+            
 </html>
